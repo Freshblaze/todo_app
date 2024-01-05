@@ -19,10 +19,16 @@ class MyApp extends StatelessWidget {
         colorScheme: todoColor,
         primaryColor: todoColor.background,
         appBarTheme: const AppBarTheme().copyWith(
-            backgroundColor: todoColor.onPrimaryContainer,
-            foregroundColor: todoColor.primaryContainer),
+          backgroundColor: todoColor.onPrimaryContainer,
+          foregroundColor: todoColor.primaryContainer,
+        ),
+        cardTheme: const CardTheme().copyWith(
+          color: (const Color.fromARGB(255, 233, 241, 242)),
+          elevation: 0,
+          margin: const EdgeInsets.all(10),
+        ),
       ),
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }

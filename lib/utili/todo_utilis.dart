@@ -1,19 +1,34 @@
 import 'package:flutter/material.dart';
 
 class TodoList extends StatelessWidget {
-  TodoList({required this.chekbox, required this.onChanging, super.key});
+  TodoList(
+      {required this.taskName,
+      required this.chekbox,
+      required this.onChanging,
+      super.key});
   Function(bool?)? onChanging;
   final bool chekbox;
+  final String taskName;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(20),
-      child: Row(
-        children: [
-          Checkbox(value: chekbox, onChanged: onChanging),
-          const Text('Make tutorial'),
-        ],
+    return Card(
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(
+          Radius.circular(1),
+        ),
+      ),
+      child: Container(
+        padding: const EdgeInsets.all(12),
+        child: Row(
+          children: [
+            Checkbox(
+              value: chekbox,
+              onChanged: onChanging,
+            ),
+            Text(taskName)
+          ],
+        ),
       ),
     );
   }
