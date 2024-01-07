@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo_app/utili/my_button.dart';
 
 class DialogBox extends StatelessWidget {
   const DialogBox({super.key});
@@ -8,8 +9,9 @@ class DialogBox extends StatelessWidget {
     return AlertDialog(
       backgroundColor: const Color.fromARGB(223, 140, 163, 246),
       content: Container(
-        height: 120,
+        height: 150,
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             TextField(
               decoration: InputDecoration(
@@ -19,7 +21,21 @@ class DialogBox extends StatelessWidget {
               ),
             ),
             Row(
-              children: [],
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                // save button and cancel button
+
+                //Save_button
+                MyButton(
+                  onPress: () {},
+                  text: 'Save',
+                ),
+                //Cancel_button
+                MyButton(
+                  onPress: () {},
+                  text: 'Save',
+                )
+              ],
             )
           ],
         ),
