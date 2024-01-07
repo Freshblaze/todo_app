@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 class TodoList extends StatelessWidget {
-  TodoList(
+  const TodoList(
       {required this.taskName,
       required this.chekbox,
       required this.onChanging,
       super.key});
-  Function(bool?)? onChanging;
+  final Function(bool?)? onChanging;
   final bool chekbox;
   final String taskName;
 
