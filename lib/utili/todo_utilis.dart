@@ -26,7 +26,13 @@ class TodoList extends StatelessWidget {
               value: chekbox,
               onChanged: onChanging,
             ),
-            Text(taskName)
+            Text(
+              taskName,
+              style: TextStyle(
+                decoration:
+                    chekbox ? TextDecoration.lineThrough : TextDecoration.none,
+              ),
+            )
           ],
         ),
       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo_app/utili/dialog_box.dart';
 import 'package:todo_app/utili/todo_utilis.dart';
 
 class HomePage extends StatefulWidget {
@@ -21,9 +22,23 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
+  //method to add new tast
+  void addtolist() {
+    showDialog(
+        context: context,
+        builder: (context) {
+          return const DialogBox();
+        });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: addtolist,
+        elevation: 0.5,
+        child: const Icon(Icons.add),
+      ),
       appBar: AppBar(
         centerTitle: true,
         title: const Text(
