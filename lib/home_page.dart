@@ -31,6 +31,13 @@ class _HomePageState extends State<HomePage> {
     Navigator.of(context).pop();
   }
 
+  //method for deleteTask
+  void deleteTask(int index) {
+    setState(() {
+      toDoList.removeAt(index);
+    });
+  }
+
   final _controller = TextEditingController();
 
   //method to add new tast
@@ -67,6 +74,7 @@ class _HomePageState extends State<HomePage> {
               chekbox: toDoList[index][1],
               onChanging: (value) => checkBoxChange(value, index),
               taskName: toDoList[index][0],
+              deleteFunction: (context) => deleteTask(index),
             );
           }),
     );

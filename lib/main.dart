@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:todo_app/home_page.dart';
 
 var todoColor =
-    ColorScheme.fromSeed(seedColor: Color.fromARGB(223, 140, 163, 246));
+    ColorScheme.fromSeed(seedColor: const Color.fromARGB(223, 140, 163, 246));
 
 void main() {
   runApp(const MyApp());
