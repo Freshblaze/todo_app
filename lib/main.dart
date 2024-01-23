@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
+
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:todo_app/home_page.dart';
 
 var todoColor =
     ColorScheme.fromSeed(seedColor: const Color.fromARGB(223, 140, 163, 246));
 
-void main() {
+void main() async {
+  //int the hive
+  await Hive.initFlutter();
+  //open a box
+  var box = await Hive.openBox('myBox');
   runApp(const MyApp());
 }
 
